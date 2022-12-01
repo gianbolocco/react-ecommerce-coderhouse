@@ -1,9 +1,24 @@
 import React from 'react'
+import {useState, useEffect} from 'react';
+import ItemList from './ItemList';
+import { consultarBDD } from '../assets/funciones';
 
 const ItemListContainer = () => {
+
+  const [productos, setProductos] = useState([]);
+
+  useEffect(() => {
+    consultarBDD().then(products => {
+        const productsList= products.filter(prod => prod.stock > 0)
+        const cardProductos = ItemList({productsList})
+        setProductos(cardProductos)
+    })
+
+},[]);
+        
   return (
-    <div className='mt-5 bg-main rounded-lg h-screen flex justify-center items-center'>
-      <h3 className='font-bold text-3xl'>ItemListContainer</h3>
+    <div className='grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4'>
+      {productos}
     </div>
   )
 }

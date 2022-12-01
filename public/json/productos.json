@@ -1,0 +1,107 @@
+[
+    {
+        "id": 1,
+        "productName": "Jordan Retro 3",
+        "img": "jordan-retro-3.jpg",
+        "brand": "Jordan",
+        "price": 199,
+        "stock": 30
+    },
+    {
+        "id": "2",
+        "productName": "Jordan Retro 6",
+        "img": "jordan-retro-6.jpg",
+        "brand": "Jordan",
+        "price": 149,
+        "stock": 30
+    },
+    {
+        "id": "3",
+        "productName": "Jordan Retro 13",
+        "img": "jordan-retro-13.jpg",
+        "brand": "Jordan",
+        "price": 139,
+        "stock": 30
+    },
+    {
+        "id": "4",
+        "productName": "Adidas Ozweego",
+        "img": "adidas-ozweego.jpg",
+        "brand": "Adidas",
+        "price": 90,
+        "stock": 30
+    },
+    {
+        "id": "5",
+        "productName": "Adidas Originals",
+        "img": "adidas-originals.jpg",
+        "brand": "Adidas",
+        "price": 59,
+        "stock": 30
+    },
+    {
+        "id": "6",
+        "productName": "Adidas Ozelia",
+        "img": "adidas-ozelia.jpg",
+        "brand": "Adidas",
+        "price": 80,
+        "stock": 30
+    },
+    {
+        "id": "7",
+        "productName": "Nike Air Huarache",
+        "img": "nike-air-huarache.jpg",
+        "brand": "Nike",
+        "price": 99,
+        "stock": 30
+    },
+    {
+        "id": "8",
+        "productName": "Nike Blazer Mid",
+        "img": "nike-blazer-mid.jpg",
+        "brand": "Nike",
+        "price": 79,
+        "stock": 30
+    },
+    {
+        "id": "9",
+        "productName": "Nike Dunk Hi",
+        "img": "nike-dunk-hi.jpg",
+        "brand": "Nike",
+        "price": 99,
+        "stock": 30
+    },
+    {
+        "id": "10",
+        "productName": "Jordan Retro 4",
+        "img": "jordan-retro-4.jpg",
+        "brand": "Jordan",
+        "price": 149,
+        "stock": 30
+    },
+    {
+        "id": "11",
+        "productName": "Jordan Retro 1",
+        "img": "jordan-retro-1.jpg",
+        "brand": "Jordan",
+        "price": 189,
+        "stock": 30
+    },
+    {
+        "id": "12",
+        "productName": "Nike Air Force 1",
+        "img": "nike-air-force-1.jpg",
+        "brand": "Nike",
+        "price": 99,
+        "stock": 30
+    },
+    {
+        "id": "13",
+        "productName": "Nike Air Max 90",
+        "img": "nike-air-max-90.jpg",
+        "brand": "Nike",
+        "price": 110,
+        "stock": 30
+    }
+
+]

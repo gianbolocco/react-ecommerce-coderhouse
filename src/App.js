@@ -6,9 +6,7 @@ function App() {
   return (
     <div className="App bg-bg p-5">
       <NavBar />
-      <div className=''>
-        <ItemListContainer />
-      </div>
+      <ItemListContainer />
     </div>
   );
 }
