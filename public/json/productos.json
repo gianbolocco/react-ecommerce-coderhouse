@@ -4,104 +4,244 @@
         "productName": "Jordan Retro 3",
         "img": "jordan-retro-3.jpg",
         "brand": "Jordan",
+        "category": "casual",
         "price": 199,
         "stock": 30
     },
     {
-        "id": "2",
+        "id": 2,
         "productName": "Jordan Retro 6",
         "img": "jordan-retro-6.jpg",
         "brand": "Jordan",
+        "category": "basketball",
         "price": 149,
         "stock": 30
     },
     {
-        "id": "3",
+        "id": 3,
         "productName": "Jordan Retro 13",
         "img": "jordan-retro-13.jpg",
         "brand": "Jordan",
+        "category": "basketball",
         "price": 139,
         "stock": 30
     },
     {
-        "id": "4",
+        "id": 4,
         "productName": "Adidas Ozweego",
         "img": "adidas-ozweego.jpg",
         "brand": "Adidas",
+        "category": "casual",
         "price": 90,
         "stock": 30
     },
     {
-        "id": "5",
+        "id": 5,
         "productName": "Adidas Originals",
         "img": "adidas-originals.jpg",
         "brand": "Adidas",
+        "category": "casual",
         "price": 59,
         "stock": 30
     },
     {
-        "id": "6",
+        "id": 6,
         "productName": "Adidas Ozelia",
         "img": "adidas-ozelia.jpg",
         "brand": "Adidas",
+        "category": "casual",
         "price": 80,
         "stock": 30
     },
     {
-        "id": "7",
+        "id": 7,
         "productName": "Nike Air Huarache",
         "img": "nike-air-huarache.jpg",
         "brand": "Nike",
+        "category": "casual",
         "price": 99,
         "stock": 30
     },
     {
-        "id": "8",
+        "id": 8,
         "productName": "Nike Blazer Mid",
         "img": "nike-blazer-mid.jpg",
         "brand": "Nike",
+        "category": "casual",
         "price": 79,
         "stock": 30
     },
     {
-        "id": "9",
+        "id": 9,
         "productName": "Nike Dunk Hi",
         "img": "nike-dunk-hi.jpg",
         "brand": "Nike",
+        "category": "casual",
         "price": 99,
         "stock": 30
     },
     {
-        "id": "10",
+        "id": 10,
         "productName": "Jordan Retro 4",
         "img": "jordan-retro-4.jpg",
         "brand": "Jordan",
+        "category": "casual",
         "price": 149,
         "stock": 30
     },
     {
-        "id": "11",
+        "id": 11,
         "productName": "Jordan Retro 1",
         "img": "jordan-retro-1.jpg",
         "brand": "Jordan",
+        "category": "casual",
         "price": 189,
         "stock": 30
     },
     {
-        "id": "12",
+        "id": 12,
         "productName": "Nike Air Force 1",
         "img": "nike-air-force-1.jpg",
         "brand": "Nike",
+        "category": "casual",
         "price": 99,
         "stock": 30
     },
     {
-        "id": "13",
+        "id": 13,
         "productName": "Nike Air Max 90",
         "img": "nike-air-max-90.jpg",
         "brand": "Nike",
+        "category": "casual",
         "price": 110,
         "stock": 30
+    },
+    {
+        "id": 14,
+        "productName": "Adidas Forum Low",
+        "img": "adidas-forum-low.jpg",
+        "brand": "Adidas",
+        "category": "casual",
+        "price": 99,
+        "stock": 30
+    },
+    {
+        "id": 15,
+        "productName": "Adidas Astir",
+        "img": "adidas-astir.jpg",
+        "brand": "Adidas",
+        "category": "casual",
+        "price": 99,
+        "stock": 30
+    },
+    {
+        "id": 16,
+        "productName": "Nike Air Max 97",
+        "img": "nike-air-max-97.jpg",
+        "brand": "Nike",
+        "category": "casual",
+        "price": 119,
+        "stock": 30
+    },
+    {
+        "id": 17,
+        "productName": "Nike LeBron XIX",
+        "img": "nike-lebron-xix.jpg",
+        "brand": "Nike",
+        "category": "basketball",
+        "price": 139,
+        "stock": 30
+    },
+    {
+        "id": 18,
+        "productName": "Jordan 6 Rings",
+        "img": "jordan-6-rings.jpg",
+        "brand": "Jordan",
+        "category": "basketball",
+        "price": 170,
+        "stock": 30
+    },
+    {
+        "id": 19,
+        "productName": "Nike Kyrie Infinity",
+        "img": "nike-kyrie-infinity.jpg",
+        "brand": "Nike",
+        "category": "basketball",
+        "price": 89,
+        "stock": 30
+    },
+    {
+        "id": 20,
+        "productName": "Nike KD 15",
+        "img": "nike-kd-15.jpg",
+        "brand": "Nike",
+        "category": "basketball",
+        "price": 150,
+        "stock": 30
+    },
+    {
+        "id": 21,
+        "productName": "Adidas harden",
+        "img": "adidas-harden.jpg",
+        "brand": "Adidas",
+        "category": "basketball",
+        "price": 119,
+        "stock": 30
+    },
+    {
+        "id": 22,
+        "productName": "Nike Air Zoom",
+        "img": "nike-air-zoom.jpg",
+        "brand": "Nike",
+        "category": "running",
+        "price": 89,
+        "stock": 30
+    },
+    {
+        "id": 23,
+        "productName": "Adidas Ultraboost Web",
+        "img": "adidas-ultraboost-web.jpg",
+        "brand": "Adidas",
+        "category": "running",
+        "price": 190,
+        "stock": 30
+    },
+    {
+        "id": 24,
+        "productName": "Nike React Infinity",
+        "img": "nike-react-infinity.jpg",
+        "brand": "Nike",
+        "category": "running",
+        "price": 119,
+        "stock": 30
+    },
+    {
+        "id": 25,
+        "productName": "Nike Free Run",
+        "img": "nike-free-run.jpg",
+        "brand": "Nike",
+        "category": "running",
+        "price": 100,
+        "stock": 30
+    },
+    {
+        "id": 26,
+        "productName": "Adidas Ultraboost 5.0",
+        "img": "adidas-ultraboost-5.0.jpg",
+        "brand": "Adidas",
+        "category": "running",
+        "price": 139,
+        "stock": 30
+    },
+    {
+        "id": 27,
+        "productName": "Adidas Ultraboost 20",
+        "img": "adidas-ultraboost-20.jpg",
+        "brand": "Adidas",
+        "category": "running",
+        "price": 139,
+        "stock": 30
     }
+    
 
 ]
