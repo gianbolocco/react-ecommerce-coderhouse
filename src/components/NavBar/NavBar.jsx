@@ -15,12 +15,12 @@ function Navbar2() {
 		<header>
 			<h3 className="text-3xl font-bold">Foot Locker</h3>
 			<nav ref={navRef}>
-                <Link to={'/'}><p className='m-5 hover:text-blue cursor-pointer'>Inicio</p></Link>
-                <p className='m-5 cursor-pointer'>Productos</p>
-                <p className='m-5 cursor-pointer'>Nostros</p>
-                <Link to={'/brand/Jordan'}><p className='m-5 cursor-pointer'>Jordan</p></Link>
-                <Link to={'/brand/Nike'}><p className='m-5 cursor-pointer'>Nike</p></Link>
-                <Link to={'/brand/Adidas'}><p className='m-5 cursor-pointer'>Adidas</p></Link>
+                <Link to={'/'}><p className='lg:m-5 hover:text-blue cursor-pointer'>Inicio</p></Link>
+                <p className='lg:m-5 cursor-pointer'>Productos</p>
+                <p className='lg:m-5 cursor-pointer'>Nostros</p>
+                <Link to={'/brand/Jordan'}><p className='lg:m-5 cursor-pointer'>Jordan</p></Link>
+                <Link to={'/brand/Nike'}><p className='lg:m-5 cursor-pointer'>Nike</p></Link>
+                <Link to={'/brand/Adidas'}><p className='lg:m-5 cursor-pointer'>Adidas</p></Link>
 				<button
 					className="nav-btn nav-close-btn"
 					onClick={showNavbar}>

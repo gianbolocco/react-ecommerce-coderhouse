@@ -6,6 +6,7 @@ import {BrowserRouter, Route, Routes} from 'react-router-dom'
 import ItemListContainer from './components/ItemListContainer';
 import NavBar from './components/NavBar/NavBar';
 import ItemDetailContainer from './components/ItemDetailContainer'
+import Footer from './components/Footer';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           <Route path='/brand/:brand' element={<ItemListContainer/>} />
         </Routes>
       </BrowserRouter>
+      <Footer />
     </div>
   );
 }
