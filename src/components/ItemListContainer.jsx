@@ -3,10 +3,13 @@ import {useState, useEffect} from 'react';
 import ItemList from './ItemList';
 import { consultarBDD } from '../assets/funciones';
 import { useParams } from 'react-router-dom';
+import { useDarkModeContext } from '../context/DarkModeContext';
 
 const ItemListContainer = () => {
 
   const [productos, setProductos] = useState([]);
+
+  const {darkMode} = useDarkModeContext()
 
   const {brand} = useParams()
 
@@ -29,7 +32,7 @@ const ItemListContainer = () => {
 },[brand]);
         
   return (
-    <div className='grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 m-20'>
+    <div className={`duration-300 grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 px-10 lg:px-20 ${darkMode ? 'bg-black' : 'bg-white'} `}>
       {productos}
     </div>
   )

@@ -241,6 +241,33 @@
         "category": "running",
         "price": 139,
         "stock": 30
+    },
+    {
+        "id": 28,
+        "productName": "Adidas Trae Young 1",
+        "img": "adidas-trae-young-1.jpg",
+        "brand": "Adidas",
+        "category": "basketball",
+        "price": 130,
+        "stock": 30
+    },
+    {
+        "id": 29,
+        "productName": "Jordan Jumpman Pro",
+        "img": "jordan-jumpman-pro.jpg",
+        "brand": "Jordan",
+        "category": "basketball",
+        "price": 170,
+        "stock": 30
+    },
+    {
+        "id": 30,
+        "productName": "Jordan XXXVI",
+        "img": "jordan-xxxvi.jpg",
+        "brand": "Jordan",
+        "category": "basketball",
+        "price": 185,
+        "stock": 30
     }
     
 
