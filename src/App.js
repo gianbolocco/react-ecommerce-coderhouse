@@ -12,6 +12,7 @@ import Footer from './components/Footer';
 import Cart from './components/Cart';
 import Checkout from './pages/Checkout'
 import AboutUs from './pages/AboutUs';
+import Home from './pages/Home';
 
 function App() {
   return (
@@ -21,7 +22,7 @@ function App() {
 
           <NavBar />
           <Routes>
-            <Route path='/' element={ <ItemListContainer/> } />
+            <Route path='/' element={ <Home /> } />
             <Route path='/product/:id' element={<ItemDetailContainer/>} />
             <Route path='/cart' element={<Cart/>}/>
             <Route path='/brand/:brand' element={<ItemListContainer/>} />

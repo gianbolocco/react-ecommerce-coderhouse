@@ -17,7 +17,7 @@ function Navbar() {
 	const {darkMode} = useDarkModeContext()
 
 	return (
-		<header className={` duration-300 ${darkMode ? 'text-white bg-black' : 'text-black bg-white'}`}>
+		<header className={` shadow-md duration-300 ${darkMode ? 'text-white bg-black' : 'text-black bg-white'}`}>
 			<h3 className={`text-3xl font-bold`}>Foot Locker</h3>
 			<nav ref={navRef}>
                 <Link to={'/'}><p className='lg:m-5 cursor-pointer text-xl font-bold hover:text-indigo-500 duration-300'>Inicio</p></Link>
