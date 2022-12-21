@@ -1,0 +1,16 @@
+.BK{
+    background-image: url('https://firebasestorage.googleapis.com/v0/b/react-ecommerce-coder-1c951.appspot.com/o/shortcutsBG%2FbasketBG.jpg?alt=media&token=e811bbc0-3bfd-49d7-aaa5-7f34bd652ebe');
+    background-position: center;
+    background-size: cover;
+}
+
+.RN{
+    background-image: url('https://firebasestorage.googleapis.com/v0/b/react-ecommerce-coder-1c951.appspot.com/o/shortcutsBG%2FrunningBG.jpg?alt=media&token=21f10cb0-2185-4b2e-a9aa-86382b8f8bfc');
+    background-position: center;
+    background-size: cover;
+}
+.CS{
+    background-image: url('https://firebasestorage.googleapis.com/v0/b/react-ecommerce-coder-1c951.appspot.com/o/shortcutsBG%2FcasualBG.jpg?alt=media&token=62e1590c-f256-4e63-83b4-fc82bcce2b12');
+    background-position: center;
+    background-size: cover;
+}

@@ -16,8 +16,8 @@ const ItemDetail = ({item}) => {
 
 
   return (
-      <div className={`pt-20 flex flex-col lg:flex-row justify-evenly duration-300 ${darkMode ? 'bg-black' : 'bg-white'}`}>
-        <img className='m-5' src={`../images/${item.img}`} alt="" />
+      <div className={`py-10 pt-32 flex flex-col lg:flex-row justify-evenly duration-300 ${darkMode ? 'bg-black' : 'bg-white'}`}>
+        <img className='m-5' src={`${item.img}`} alt="" />
         <div className={`rounded-xl p-5 flex flex-col justify-evenly lg:m-3 duration-300  ${darkMode ? 'bg-gray-800 text-white' : 'bg-gray-200'}`}>
           <p className='mb-5 text-center font-bold text-5xl'>{item.productName}</p>
           <p className='mb-5 text-gray-500 text-xl'>{item.brand} / {item.category}</p>

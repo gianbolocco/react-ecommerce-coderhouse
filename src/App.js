@@ -26,8 +26,10 @@ function App() {
             <Route path='/product/:id' element={<ItemDetailContainer/>} />
             <Route path='/cart' element={<Cart/>}/>
             <Route path='/brand/:brand' element={<ItemListContainer/>} />
+            <Route path='/category/:category' element={<ItemListContainer/>} />
             <Route path='/nosotros' element={<AboutUs/>} />
             <Route path='/checkout' element={<Checkout />} />
+            <Route path='/productos' element={<ItemListContainer />} />
           </Routes>
 
         </DarkModeProvider>

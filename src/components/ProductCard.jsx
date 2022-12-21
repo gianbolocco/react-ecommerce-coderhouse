@@ -10,8 +10,8 @@ const ProductCard = ({prod}) => {
 
   return (
     <Link to={`/product/${prod.id}`}>
-      <div class={`bg-gray-50 m-5 rounded-md hover:bg-gray-200 hover:shadow-lg duration-300 ${darkMode ? 'bg-gray-900 hover:bg-gray-700 text-white' : 'bg bg-gray-200'}`}>
-          <img src={`../images/${prod.img}`} alt="plant" class=" rotate-45 h-auto p-10" />
+      <div class={`m-5 rounded-md hover:shadow-lg duration-300 ${darkMode ? 'bg-gray-900 hover:bg-gray-800 text-white' : 'bg-gray-100 hover:bg-gray-200'}`}>
+          <img src={`${prod.img}`} alt="plant" class="rotate-45 h-auto p-5" />
           <div class="flex flex-col justify-center align-middle">
           <p class=" text-2xl text-center mb-5 font-black">{prod.productName}</p>
           <p class="text-5xl font-black text-center"><span>${prod.price}</span></p>

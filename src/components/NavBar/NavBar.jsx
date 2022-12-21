@@ -18,10 +18,10 @@ function Navbar() {
 
 	return (
 		<header className={` shadow-md duration-300 ${darkMode ? 'text-white bg-black' : 'text-black bg-white'}`}>
-			<h3 className={`text-3xl font-bold`}>Foot Locker</h3>
+			<Link to={'/'}><h3 className={`text-3xl font-bold`}>Foot Locker</h3></Link>
 			<nav ref={navRef}>
                 <Link to={'/'}><p className='lg:m-5 cursor-pointer text-xl font-bold hover:text-indigo-500 duration-300'>Inicio</p></Link>
-                <p className='lg:m-5 cursor-pointer text-xl font-bold hover:text-indigo-500 duration-300'>Productos</p>
+                <Link to={'/productos'}><p className='lg:m-5 cursor-pointer text-xl font-bold hover:text-indigo-500 duration-300'>Productos</p></Link>
                	<Link to={'/Nosotros'}> <p className='lg:m-5 cursor-pointer text-xl font-bold hover:text-indigo-500 duration-300'>Nostros</p></Link>
                 <Link to={'/brand/Jordan'}><p className='lg:m-5 cursor-pointer text-xl font-bold hover:text-indigo-500 duration-300'>Jordan</p></Link>
                 <Link to={'/brand/Nike'}><p className='lg:m-5 cursor-pointer text-xl font-bold hover:text-indigo-500 duration-300'>Nike</p></Link>
