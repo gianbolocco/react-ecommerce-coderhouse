@@ -25,24 +25,25 @@ const Cart = () => {
 
                         <div>
                             {cart.map(prod => 
-                                <div key={prod.id} className={`lg:w-[75%] px-5 mb-3 duration-300 m-5 rounded-md hover:shadow-lg flex flex-col lg:flex-row justify-evenly items-center ${darkMode ? 'bg-gray-900 hover:bg-gray-700 text-white' : 'bg-gray-100 hover:bg-gray-200 text-black'}`}>
-
-                                    <img className=" w-64 lg:w-[25%]" src={`${prod.img}`} alt="" />
-                                    <div>
-                                        <p className="my-5 text-2xl font-bold">{prod.productName}</p>
-                                        <p className="mb-5"><span className=" font-extrabold">Cantidad:</span> {prod.cant}</p>
-                                        <p className="mb-5"><span className=" font-extrabold">Precio unitario:</span> ${prod.price}</p>
-                                        <p className="mb-5"><span className=" font-extrabold">Precio total:</span> ${prod.price * prod.cant}</p>
+                                    <div key={prod.id} className={`lg:w-[75%] px-5 mb-3 duration-300 m-5 rounded-md hover:shadow-lg flex flex-col lg:flex-row justify-evenly items-center ${darkMode ? 'bg-gray-900 hover:bg-gray-700 text-white' : 'bg-gray-100 hover:bg-gray-200 text-black'}`}>
+                                        <img className=" w-64 lg:w-[25%]" src={`${prod.img}`} alt="" />
+                                        <Link to={`/product/${prod.id}`}>
+                                            <p className="my-5 text-2xl font-bold duration-300 hover:text-indigo-500">{prod.productName}</p>
+                                            <p className="mb-5"><span className=" font-extrabold">Cantidad:</span> {prod.cant}</p>
+                                            <p className="mb-5"><span className=" font-extrabold">Precio unitario:</span> ${prod.price}</p>
+                                            <p className="mb-5"><span className=" font-extrabold">Precio total:</span> ${prod.price * prod.cant}</p>
+                                        </Link>
+                                        <button className="text-red-500 p-5 pb-10 duration-300 lg:pb-5 font-bold text-lg hover:text-red-400" onClick={() => removeItem(prod.id)}>Eliminar producto</button>
                                     </div>
-                                    <button className="text-red-500 pb-5 lg:pb-0 font-bold text-lg" onClick={() => removeItem(prod.id)}>Eliminar producto</button>
-                                </div>
+                                
+                                
                             )}
                         </div>
                         
                         <div className={`p-10 m-5 rounded-md duration-300 flex flex-col justify-evenly items-center ${darkMode ? 'bg-gray-900 text-white' : 'bg-gray-100 text-black'}`}>
-                            <p className="mb-10 text-5xl">Total: <span className=" font-extralight">${totalPrice()}</span> </p>
-                            <button className="text-red-500 font-bold text-xl mb-10" onClick={emptyCart}>Vaciar carrito</button>
-                            <button className="font-bold text-xl duration-300 bg-black text-white rounded-md hover:bg-indigo-500 p-5"><Link to={'/checkout'}>Finalizar Compra</Link></button>
+                            <p className="text-5xl">Total: <span className=" font-extralight">${totalPrice()}</span> </p>
+                            <button className="text-red-500 font-bold text-xl p-5 my-10 duration-300 hover:text-red-400" onClick={emptyCart}>Vaciar carrito</button>
+                            <Link to={'/checkout'}><button className="font-bold text-xl duration-300 bg-black text-white rounded-md hover:bg-indigo-500 p-5">Finalizar Compra</button></Link>
                         </div>
                     </div>
                     
