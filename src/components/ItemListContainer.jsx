@@ -1,14 +1,16 @@
 import React from 'react'
 import {useState, useEffect} from 'react';
 import ItemList from './ItemList';
-import { consultarBDD } from '../assets/funciones';
 import { useParams } from 'react-router-dom';
 import { useDarkModeContext } from '../context/DarkModeContext';
-import { cargarBDD } from '../assets/firebase';
+import {getProducts } from '../assets/firebase';
+// import { cargarBDD } from '../assets/firebase';
 
 const ItemListContainer = () => {
 
-  const [productos, setProductos] = useState([]);
+  // cargarBDD().then(products => console.log(products))
+
+  const [products, setProducts] = useState([]);
 
   const {darkMode} = useDarkModeContext()
 
@@ -17,16 +19,16 @@ const ItemListContainer = () => {
   useEffect(() => {
 
     if(brand){
-      consultarBDD('../json/productos.json').then(products => {
+      getProducts().then(products => {
         const productsList= products.filter(prod => prod.stock > 0).filter(prod => prod.brand === brand)
-        const cardProductos = ItemList({productsList})
-        setProductos(cardProductos)
+        const cardProducts = ItemList({productsList})
+        setProducts(cardProducts)
     })
     }else{
-      consultarBDD('./json/productos.json').then(products => {
+      getProducts().then(products => {
         const productsList= products.filter(prod => prod.stock > 0)
-        const cardProductos = ItemList({productsList})
-        setProductos(cardProductos)
+        const cardProducts = ItemList({productsList})
+        setProducts(cardProducts)
     })
     }
 
@@ -34,37 +36,39 @@ const ItemListContainer = () => {
 
 },[brand]);
 
+
 useEffect(() => {
 
   if(category){
-    consultarBDD('../json/productos.json').then(products => {
+    getProducts().then(products => {
       const productsList= products.filter(prod => prod.stock > 0).filter(prod => prod.category === category)
-      const cardProductos = ItemList({productsList})
-      setProductos(cardProductos)
+      const cardProducts = ItemList({productsList})
+      setProducts(cardProducts)
   })
   }else{
-    consultarBDD('./json/productos.json').then(products => {
+    getProducts().then(products => {
       const productsList= products.filter(prod => prod.stock > 0)
-      const cardProductos = ItemList({productsList})
-      setProductos(cardProductos)
+      const cardProducts = ItemList({productsList})
+      setProducts(cardProducts)
   })
   }
 
-
-
 },[category]);
-        
+
+  // getProducts().then(products => console.log(products))
+
   return (
     <div className={`pt-32 duration-300 ${darkMode ? 'bg-black text-white' : 'bg-white text-black'}`}>
       <h1 className=' pb-10 font-extrabold text-5xl text-center'>Productos: <span className='font-light'>{category}{brand}</span></h1>
       <div className={` grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 px-10 lg:px-20 `}>
-        {productos}
+        {products}
       </div>
     </div>
     
   )
 }
 
-// cargarBDD().then(productos => console.log(productos))
+
+
 
 export default ItemListContainer

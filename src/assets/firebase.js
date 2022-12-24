@@ -1,7 +1,6 @@
 import { initializeApp } from "firebase/app";
 
-import {getFirestore, addDoc, collection} from 'firebase/firestore'
-
+import {getFirestore, addDoc, getDocs, getDoc, updateDoc, deleteDoc, collection, doc} from 'firebase/firestore'
 const firebaseConfig = {
   apiKey: process.env.API_KEY,
   authDomain: "react-ecommerce-coder-1c951.firebaseapp.com",
@@ -18,9 +17,9 @@ const db = getFirestore()
 
 const cargarBDD = async () => {
   const promise = await fetch('./json/productos.json')
-  const productos = await promise.json()
-  productos.forEach( async (prod) => {
-    await addDoc(collection(db, 'productos'), {
+  const products = await promise.json()
+  products.forEach( async (prod) => {
+    await addDoc(collection(db, 'products'), {
       productName : prod.productName,
       brand: prod.brand,
       category: prod.category,
@@ -31,4 +30,50 @@ const cargarBDD = async () => {
   });
 }
 
-export {cargarBDD}
+const getProducts = async() => {
+  const products = await getDocs(collection(db, "products"))
+  const items = products.docs.map(prod => {
+      return {...prod.data(), id: prod.id}
+  })
+  return items
+}
+
+const getProduct =  async (id) => {
+  const product = await getDoc(doc(db, "products", id))
+  const item = {...product.data(), id: product.id}
+  return item
+}
+
+const updateProduct = async (id, info) => {
+  const estado = await updateDoc(doc(db,"products", id), info)
+  return estado
+}
+
+const deleteProduct = async(id) =>{
+  const estado = await deleteDoc(doc(db, "products", id))
+  return estado
+}
+
+//CREATE Y READ ORDENES COMPRA
+
+const createPurchseOrder = async (customer, preTotal, date ) => {
+  const purchaseOrder = await addDoc(collection(db, "purchaseOrder"),{
+      fullName: customer.name,
+      email: customer.email,
+      dni: customer.dni,
+      address: customer.address,
+      phoneNumber: customer.phoneNumber,
+      date: date,
+      precioTotal: preTotal
+  })
+
+  return purchaseOrder
+}
+
+const getPurchseOrder =  async (id) => {
+  const purchaseOrder = await getDoc(doc(db, "purchaseOrder", id))
+  const item = {...purchaseOrder.data(), id: purchaseOrder.id}
+  return item
+}
+
+export {cargarBDD, getProducts, getProduct, updateProduct, getPurchseOrder, createPurchseOrder, deleteProduct}

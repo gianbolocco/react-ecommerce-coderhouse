@@ -31,7 +31,7 @@ const Header = () => {
   return (
     <div className={`p-20 pt-40 flex flex-col lg:flex-row items-center justify-evenly duration-300 ${darkMode ? "bg-black text-white" : "bg-white text-black"}`}>
         <div className={`rounded-full flex justify-center align-middle duration-50 ${darkMode ? "bg-white" : "bg-black"}`}>
-            <img src={`../images/${selectedImage}`} className=' rotate-45 duration-300 hover:rotate-0' alt="" />
+            <img src={`../images/${selectedImage}`} className=' lg:rotate-45 duration-300 hover:rotate-0' alt="" />
         </div>
 
         <div className='flex flex-col justify-center align-middle'>

@@ -56,7 +56,7 @@ const Cart = () => {
 export default Cart;
 
 
-{/* <div className="pt-20">
-            <h1>Imaginen productos</h1>
-            <button className="btn btn-dark"><Link to={'/checkout'}>Finalizar Compra</Link></button>
-        </div> */}
+//<div className="pt-20">
+//  <h1>Imaginen productos</h1>
+//  <button className="btn btn-dark"><Link to={'/checkout'}>Finalizar Compra</Link></button>
+//</div>
