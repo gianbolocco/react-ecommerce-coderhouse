@@ -17,7 +17,7 @@ const Cart = () => {
             cart.length === 0 ?
                 <div className={`flex flex-col justify-center items-center min-h-[60vh] duration-300 ${darkMode ? "bg-black text-white" : "bg-white text-black"}`}>  
                     <h1 className="text-6xl mb-10 font-thin">Carrito vacio</h1>
-                    <button className="p-5 duration-300 text-2xl bg-gray-900 text-white hover:bg-indigo-500 rounded-md"><Link to={'/'}>Continuar contando</Link></button>
+                    <button className="p-5 duration-300 text-2xl bg-gray-900 text-white hover:bg-indigo-500 rounded-md"><Link to={'/'}>Continuar comprando</Link></button>
                 </div>
                 :
                 <>
