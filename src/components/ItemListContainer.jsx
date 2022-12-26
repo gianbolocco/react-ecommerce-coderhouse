@@ -4,6 +4,7 @@ import ItemList from "./ItemList";
 import { useParams } from "react-router-dom";
 import { useDarkModeContext } from "../context/DarkModeContext";
 import { getProducts } from "../assets/firebase";
+import Spinner from "./Spinner";
 
 // Define la cantidad de elementos por página
 const ITEMS_PER_PAGE = 8;
@@ -13,11 +14,17 @@ const ItemListContainer = () => {
   const [products, setProducts] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
   const [totalPages, setTotalPages] = useState(1);
+  const [isLoading, setIsLoading] = useState(true);
 
   const { darkMode } = useDarkModeContext();
   const { brand, category } = useParams();
 
   useEffect(() => {
+
+    getProducts().then((products) => {
+      setProducts(products);
+      setIsLoading(false);
+    });
     getProducts().then(products => {
       let productsList = products.filter(prod => prod.stock > 0);
       if (brand) {
@@ -46,30 +53,38 @@ const ItemListContainer = () => {
     const pages = Array.from({ length: totalPages }, (_, i) => i + 1);
 
   return (
-    <div className={`pt-32 duration-300 ${darkMode ? "bg-black text-white" : "bg-white text-black"}`}>
-      <h1 className="pb-10 font-extrabold text-5xl text-center">
-        Productos:{" "}
-        <span className="font-light">{category}</span>
-      </h1>
-      <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 px-10 lg:px-20">
-        {products}
+    <>
+      {isLoading ? (
+        <Spinner />
+      ):(
+        <div className={`pt-32 duration-300 ${darkMode ? "bg-black text-white" : "bg-white text-black"}`}>
+        <h1 className="pb-10 font-extrabold text-5xl text-center">
+          Productos:{" "}
+          <span className="font-light">{category}</span>
+        </h1>
+        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 px-10 lg:px-20">
+          {products}
+        </div>
+        {/* Mostrar botones de "siguiente" y "anterior" */}
+        <div className="text-center pt-10">
+          {currentPage > 1 && (
+            <button className={`text-2xl font-bold mx-2 p-5 rounded-md duration-300 hover:bg-indigo-500 hover:shadow-lg ${darkMode ? "bg-gray-900 hover:bg-gray-800" : "bg-gray-100 hover:bg-gray-200"} `} onClick={() => goToPage(currentPage - 1)}>Anterior</button>
+          )}
+          {currentPage < totalPages && (
+            <button className={`text-2xl font-bold mx-2 p-5 rounded-md duration-300 hover:bg-indigo-500 hover:shadow-lg ${darkMode ? "bg-gray-900 hover:bg-gray-800" : "bg-gray-100 hover:bg-gray-200"} `} onClick={() => goToPage(currentPage + 1)}>Siguiente</button>
+          )}
+        </div>
+        {/* Mostrar índice de páginas */}
+        <div className="py-5 text-center duration-300">
+          <p className="font-black text-2xl" >Indice: {currentPage}</p>
+          {pages.map(page => (
+            <button onClick={() => goToPage(page)} className="text-xl font-bold p-3 m-3 rounded-full duration-300 hover:bg-indigo-500 hover:text-white" key={page}>{page}</button>))}
+        </div>
       </div>
-      {/* Mostrar botones de "siguiente" y "anterior" */}
-      <div className="text-center pt-10">
-        {currentPage > 1 && (
-          <button className={`text-2xl font-bold mx-2 p-5 rounded-md duration-300 hover:bg-indigo-500 hover:text-white ${darkMode ? "bg-gray-900" : "bg-gray-100"} `} onClick={() => goToPage(currentPage - 1)}>Anterior</button>
-        )}
-        {currentPage < totalPages && (
-          <button className={`text-2xl font-bold mx-2 p-5 rounded-md duration-300 hover:bg-indigo-500 hover:text-white ${darkMode ? "bg-gray-900" : "bg-gray-100"} `} onClick={() => goToPage(currentPage + 1)}>Siguiente</button>
-        )}
-      </div>
-      {/* Mostrar índice de páginas */}
-      <div className="py-5 text-center duration-300">
-        <p className="font-black text-2xl" >Indice: {currentPage}</p>
-        {pages.map(page => (
-          <button onClick={() => goToPage(page)} className="text-xl font-bold p-3 m-3 rounded-full duration-300 hover:bg-indigo-500 hover:text-white" key={page}>{page}</button>))}
-      </div>
-    </div>
+      )}
+      
+    </>
+
     )
 }
 

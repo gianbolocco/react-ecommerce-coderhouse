@@ -1,5 +1,6 @@
 import React from 'react'
 import ItemCount from './ItemCount'
+import { Link } from 'react-router-dom'
 
 import { useDarkModeContext } from '../context/DarkModeContext'
 import {useCartContext} from '../context/CartContext'
