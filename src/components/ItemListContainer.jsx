@@ -59,8 +59,7 @@ const ItemListContainer = () => {
       ):(
         <div className={`pt-32 duration-300 ${darkMode ? "bg-black text-white" : "bg-white text-black"}`}>
         <h1 className="pb-10 font-extrabold text-5xl text-center">
-          Productos:{" "}
-          <span className="font-light">{category}</span>
+          Productos: <span className="font-light">{category}{brand}</span>
         </h1>
         <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 px-10 lg:px-20">
           {products}

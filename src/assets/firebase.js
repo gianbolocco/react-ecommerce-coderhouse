@@ -1,6 +1,7 @@
 import { initializeApp } from "firebase/app";
 
 import {getFirestore, addDoc, getDocs, getDoc, updateDoc, deleteDoc, collection, doc} from 'firebase/firestore'
+
 const firebaseConfig = {
   apiKey: process.env.API_KEY,
   authDomain: "react-ecommerce-coder-1c951.firebaseapp.com",
@@ -56,24 +57,25 @@ const deleteProduct = async(id) =>{
 
 //CREATE Y READ ORDENES COMPRA
 
-const createPurchseOrder = async (customer, preTotal, date ) => {
+const createPurchaseOrder = async (client, preTotal, date ) => {
   const purchaseOrder = await addDoc(collection(db, "purchaseOrder"),{
-      fullName: customer.name,
-      email: customer.email,
-      dni: customer.dni,
-      address: customer.address,
-      phoneNumber: customer.phoneNumber,
+      name: client.name,
+      email: client.email,
+      dni: client.dni,
+      address: client.address,
+      phoneNumber: client.phoneNumber,
       date: date,
-      precioTotal: preTotal
+      precioTotal: preTotal,
   })
 
   return purchaseOrder
 }
 
-const getPurchseOrder =  async (id) => {
-  const purchaseOrder = await getDoc(doc(db, "purchaseOrder", id))
-  const item = {...purchaseOrder.data(), id: purchaseOrder.id}
+
+const getPurchaseOrder =  async (id) => {
+  const ordenCompra = await getDoc(doc(db, "purchaseOrder", id))
+  const item = {...ordenCompra.data(), id: ordenCompra.id}
   return item
 }
 
-export {cargarBDD, getProducts, getProduct, updateProduct, getPurchseOrder, createPurchseOrder, deleteProduct}
+export {cargarBDD, getProducts, getProduct, updateProduct, getPurchaseOrder, createPurchaseOrder, deleteProduct}
