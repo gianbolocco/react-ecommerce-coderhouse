@@ -15,7 +15,7 @@ npm start
 
 _Deployed in vercel_
 
-* [FootLocker](https://reactjs.org/)
+* [FootLocker](https://react-ecommerce-coderhouse.vercel.app/)
 
 ## Built with 🛠️
 
