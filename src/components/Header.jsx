@@ -1,7 +1,6 @@
 import React from 'react'
 import { useDarkModeContext } from '../context/DarkModeContext';
 
-// codigo de gpt3
 const images = [
     'https://firebasestorage.googleapis.com/v0/b/react-ecommerce-coder-1c951.appspot.com/o/nike-air-huarache.jpg?alt=media&token=95b16a4a-d88c-4432-9aec-00cd981b9cbe',
     'https://firebasestorage.googleapis.com/v0/b/react-ecommerce-coder-1c951.appspot.com/o/nike-blazer-mid.jpg?alt=media&token=4cde408e-ba02-44e3-af34-deed0830326b',

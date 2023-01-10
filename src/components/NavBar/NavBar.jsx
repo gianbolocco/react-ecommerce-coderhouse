@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { useRef } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 
-import DarkModeButton from "./DarkModeButton";
+import DarkModeButton from "../darkModeButton/DarkModeButton";
 import { useDarkModeContext } from "../../context/DarkModeContext";
 
 function Navbar() {

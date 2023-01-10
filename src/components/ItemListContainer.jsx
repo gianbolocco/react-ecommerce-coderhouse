@@ -88,5 +88,3 @@ const ItemListContainer = () => {
 }
 
 export default ItemListContainer;
-
-// Pagination creado con ayuda de GPT-3
